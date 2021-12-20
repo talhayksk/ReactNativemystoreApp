@@ -5,12 +5,16 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Products from './pages/Products/Products.js'
 import Detail from './pages/Detail/Detail.js'
+import Login from './pages/Login';
 
 const Stack=createNativeStackNavigator();
 function Router() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen name="LoginPage"  component={Login} options={{
+    headerShown:false,
+        }} />
         <Stack.Screen name="ProductsPage"  component={Products} options={{
           title:"Dükkan",
           headerStyle:{backgroundColor:'#64b5f6'},
